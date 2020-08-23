@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+	<Target Name="ILMerge">
+		<Exec Command="$(ILMergeConsolePath) /out:Standalone.dll C:\Users\pcuser\source\repos\ProcessHollow\DInvoke\bin\Release\netcoreapp3.1\DInvoke.dll bin\Release\netcoreapp3.1\ProcessHollowing.dll" />
+			  </Target>
+
+  <ItemGroup>
+    <Reference Include="System.Management.Automation">
+      <HintPath>bin\Release\netcoreapp3.1\System.Management.Automation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
