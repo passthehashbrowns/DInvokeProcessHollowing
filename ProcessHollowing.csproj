@@ -12,9 +12,6 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
-	<Target Name="ILMerge">
-		<Exec Command="$(ILMergeConsolePath) /out:Standalone.dll C:\Users\pcuser\source\repos\ProcessHollow\DInvoke\bin\Release\netcoreapp3.1\DInvoke.dll bin\Release\netcoreapp3.1\ProcessHollowing.dll" />
-			  </Target>
 
   <ItemGroup>
     <Reference Include="System.Management.Automation">
